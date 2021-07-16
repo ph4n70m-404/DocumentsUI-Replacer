@@ -107,7 +107,7 @@ prop_process() {
 
 # Credits
 ui_print "**************************************"
-ui_print "*   Based off of MMT Extended by Zackptg5 @ XDA   *"
+ui_print "*     Based off of MMT Extended      *"
 ui_print "**************************************"
 ui_print " "
 
