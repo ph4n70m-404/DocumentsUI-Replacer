@@ -8,7 +8,7 @@ if chooseport; then
 rm -rf $MODPATH/temp
 else
   echo "black dark theme chosen"
-cp -f $MODPATH/temp/DocumentsUI/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI/DocumentsUI.apk
+cp -f $MODPATH/temp/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI/DocumentsUI.apk
 rm -rf $MODPATH/temp
 fi
 
