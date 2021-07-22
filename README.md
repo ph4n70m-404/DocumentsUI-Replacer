@@ -1,4 +1,7 @@
 # DocumentsUI-Replacer
+<p align="center">
+Stock is not fully supported because documentsui is supposed to be updated by project mainline aka google play system updates meaning it can cause weird bugs.
+</p>
 Magisk module that replaces the DocumentsUI package with the AICP one.
 
 DocumentsUI is the built in file manager that depending on the rom is also the only file manager.
