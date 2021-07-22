@@ -3,7 +3,7 @@
  echo "         Choose which DocumentsUI version you want installed:       "
  echo "   grey dark theme is from LineageOS, black dark theme is from dotOS"
  echo "            Vol+ = grey dark theme, Vol- = black dark theme         "
-if chooseport; then
+if chooseport 10; then
   echo "grey dark theme chosen"
 rm -rf $MODPATH/temp
 else
