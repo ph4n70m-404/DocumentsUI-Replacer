@@ -1,7 +1,25 @@
 # DocumentsUI-Replacer
 **Stock is not fully supported because documentsui is supposed to be updated by project mainline aka google play system updates meaning it can cause weird bugs.**
 
-Magisk module that replaces the DocumentsUI package with the AICP one.
+# Explanation & beneits
+This is a magisk module that replaces the DocumentsUI package with the LineageOS or dotOS one. DocumentsUI is the built in file manager that depending on the rom is also the only file manager. The benefits to replacing it are:
+- Fixing any bugs on the native DocumentsUI package such as not being able to view zips
+- Making the DocumentsUI package available on the homescreen if it isn't already
+- Making the dark theme even darker with the dotOS variant
 
-DocumentsUI is the built in file manager that depending on the rom is also the only file manager.
-The main reason to use this module is it will fix DocumentsUI packages that can't see inside zip files or any other bugs. Another benefit is that it will be added to the homescreen as files if the rom doesn't already have the DocumentsUI package as the file manager on the homescreen e.g. roms like Evolution X that have the google file manager instead.
+# Installation
+Download the zip and flash with magisk. You will be given a volume key choice, the up key being the grey dark theme(the LineageOS DocumentsUI package) and the down key being the black dark theme (the dotOS DocumentsUI package).
+
+# Credits
+- [@topjohnwu](https://github.com/topjohnwu) - Magisk
+- [@Zackptg5](https://github.com/Zackptg5) - Magisk Module Template
+- [@LineageOS](https://github.com/lineageos) - The LineageOS DocumentsUI package
+- [@dotOS](https://github.com/topjohnwu) - The dotOS DocumentsUI package
+
+#Changelog
+- **V2**
+Implemented the volume key decision between themes
+Pulled DocumentsUI packages from official LineageOS 18.1 and dotOS 5.1.2 builds
+- **V1**
+Original release 
+Pulled DocumentsUI package from an AICP build (AICP uses their DocumentsUI from LineageOS apparently)
