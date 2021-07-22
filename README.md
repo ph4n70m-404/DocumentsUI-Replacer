@@ -17,9 +17,9 @@ Download the zip and flash with magisk. You will be given a volume key choice, t
 - [@dotOS](https://github.com/topjohnwu) - The dotOS DocumentsUI package
 
 #Changelog
-- **V2**
-Implemented the volume key decision between themes
+- **V2**  
+Implemented the volume key decision between themes  
 Pulled DocumentsUI packages from official LineageOS 18.1 and dotOS 5.1.2 builds
-- **V1**
-Original release 
+- **V1**  
+Original release  
 Pulled DocumentsUI package from an AICP build (AICP uses their DocumentsUI from LineageOS apparently)
