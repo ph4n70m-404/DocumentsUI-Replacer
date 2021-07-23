@@ -17,7 +17,7 @@ Download the zip and flash with magisk. You will be given a volume key choice, t
 - [@dotOS](https://github.com/topjohnwu) - The dotOS DocumentsUI package
 
 #Changelog
-- **v2.1**
+- **v2.1**  
 Added support for a config file  
 Implemented the ability to use a user picked DocumentsUI that can only be set with the config file  
 cleaned up the code a bit, deleted unused files  
