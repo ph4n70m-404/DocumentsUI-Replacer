@@ -29,9 +29,9 @@ else
         cp -f $configfolder/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI/DocumentsUI.apk
       else
         echo"no documentsui package in the valid area"
-        else
-        echo"no valid option selected"
       fi
+    else
+      echo"no valid option selected"
     fi
   fi
 fi
