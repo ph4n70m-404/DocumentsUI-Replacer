@@ -34,10 +34,10 @@ else
   echo "Vol+ = grey dark theme, Vol- = black dark theme"
   if chooseport; then
     echo "grey dark theme chosen"
-    GreyTheme
+    GreyInstall
   else
     echo "black dark theme chosen"
-    BlackTheme
+    BlackInstall
   fi
 fi
 #post install cleanup
