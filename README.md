@@ -8,7 +8,8 @@ This is a magisk module that replaces the DocumentsUI package with the LineageOS
 - Making the dark theme even darker with the dotOS variant
 
 # Installation
-Download the zip and flash with magisk. You will be given a volume key choice, the up key being the grey dark theme(the LineageOS DocumentsUI package) and the down key being the black dark theme (the dotOS DocumentsUI package).
+Download the zip and flash with magisk. You will be given a volume key choice, the up key being the grey dark theme(the LineageOS DocumentsUI package) and the down key being the black dark theme (the dotOS DocumentsUI package).  
+You can use the config file (locating in the release page and the temp directory in the zip) to preset the theme parameter and set it to custom to load a user picked DocumentsUI package however it must be called DocumentsUI.apk and must be in /sdcard/documentsui-replacer. The config file itself must also be in the /sdcard/documentsui-replacer location.
 
 # Credits
 - [@topjohnwu](https://github.com/topjohnwu) - Magisk
