@@ -1,0 +1,5 @@
+#this file goes in /sdcard/documentsui-replacer
+#proper usage is "theme=grey"
+#the current theme choices are black and grey
+#if you set theme to custom it will install a user placed documentsui package in /sdcard/documentsui-replacer but it must be named as DocumentsUI.apk
+theme=black
