@@ -1,44 +1,56 @@
 #installing the proper documentsui package
 GreyInstall() {
-  echo "installing grey dark theme"
+  echo "Installing grey dark theme"
 }
 BlackInstall() {
-  echo "installing black dark theme"
+  echo "Installing black dark theme"
   cp -f $MODPATH/temp/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI/DocumentsUI.apk
 }
 CustomInstall() {
+  echo "Installing custom DocumentsUI package"
   if [ -e "$configfolder/DocumentsUI.apk" ]; then
     cp -f $configfolder/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI/DocumentsUI.apk
   else
-    echo"no documentsui package in the valid area"
+    echo "No DocumentsUI package in the valid area, falling back to volume key selection"
+    VolumeSelect
   fi
 }
-#look for config
-configfolder=/sdcard/documentsui-replacer/
-if [ -f "$configfolder/config.txt" ]; then
-  source $configfolder/config.txt
-  if theme=grey; then
-    GreyInstall
-  elif theme=black; then
-    BlackInstall
-  elif theme=custom; then
-    CustomInstall
-  else
-    echo"no valid option selected"
-  fi
-else
-  #Volume key selection if no config
+#Volume key selection if no config
+VolumeSelect() {
   echo "- Select Version -"
   echo "Choose which DocumentsUI version you want installed:"
   echo "grey dark theme is from LineageOS, black dark theme is from dotOS"
   echo "Vol+ = grey dark theme, Vol- = black dark theme"
   if chooseport; then
-    echo "grey dark theme chosen"
+    echo "Grey dark theme chosen"
     GreyInstall
   else
-    echo "black dark theme chosen"
+    echo "Black dark theme chosen"
     BlackInstall
   fi
+}
+#look for config and check for parameters
+configfolder=/sdcard/documentsui-replacer/
+if [ -f "$configfolder/config.txt" ]; then
+  grep -q "theme=grey" $configfolder/config.txt
+  if [[ $? = 0 ]]; then
+    GreyInstall
+  else
+    grep -q "theme=black" $configfolder/config.txt
+    if [[ $? = 0 ]]; then
+      BlackInstall
+    else
+      grep -q "theme=custom" $configfolder/config.txt
+      if [[ $? = 0 ]]; then
+        CustomInstall
+      else
+        echo "No valid option selected, falling back to volume key selection"
+        VolumeSelect
+      fi
+    fi
+  fi
+else
+  VolumeSelect
 fi
 #post install cleanup
 rm -rf $MODPATH/temp
