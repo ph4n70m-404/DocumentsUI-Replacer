@@ -1,5 +1,5 @@
-#this file goes in /sdcard/documentsui-replacer
-#proper usage is "theme=grey"
-#the current theme choices are black and grey
-#if you set theme to custom it will install a user placed documentsui package in /sdcard/documentsui-replacer but it must be named as DocumentsUI.apk
-theme=black
+#which theme should be installed?
+#grey (grey is considered the default) - the grey dark theme (LineageOS DocumentsUI package)
+#black - the black dark theme (dotOS DocumentsUI package)
+#custom - a DocumentsUI package placed by the user in /sdcard/documentsui-replacer/
+theme=grey
