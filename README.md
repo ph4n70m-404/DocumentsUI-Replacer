@@ -18,10 +18,16 @@ You can use the config file (located in the release page and the temp directory 
 - [@dotOS](https://github.com/topjohnwu) - The dotOS DocumentsUI package
 
 #Changelog
+- **v2.2**  
+Fixed config not working  
+New config  
+Old config doesnt work with the new version  
+Cleaned up the code a bit more  
+Made it so that if the config fails it takes you to the volume selection menu  
 - **v2.1**  
 Added support for a config file  
 Implemented the ability to use a user picked DocumentsUI that can only be set with the config file  
-cleaned up the code a bit, deleted unused files  
+Cleaned up the code a bit, deleted unused files  
 - **v2**  
 Implemented the volume key decision between themes  
 Pulled DocumentsUI packages from official LineageOS 18.1 and dotOS 5.1.2 builds
