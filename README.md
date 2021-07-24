@@ -21,7 +21,7 @@ You can use the config file (located in the release page and the temp directory 
 - **v2.2**  
 Fixed config not working  
 New config  
-Old config doesnt work with the new version  
+Old config doesn't work with the new version  
 Cleaned up the code a bit more  
 Made it so that if the config fails it takes you to the volume selection menu  
 - **v2.1**  
