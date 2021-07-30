@@ -1,19 +1,20 @@
+configfolder=/sdcard/documentsui-replacer/
 #installing the proper documentsui package
-GreyInstall() {
-  echo "Installing grey dark theme"
-}
-BlackInstall() {
-  echo "Installing black dark theme"
-  cp -f $MODPATH/temp/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI/DocumentsUI.apk
-}
-CustomInstall() {
-  echo "Installing custom DocumentsUI package"
-  if [ -e "$configfolder/DocumentsUI.apk" ]; then
-    cp -f $configfolder/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI/DocumentsUI.apk
+Install() {
+  echo "Installing $theme"
+  if [ -e "$MODPATH/temp/$package/DocumentsUI.apk" ]; then
+    echo "Files needed found"
+  elif [ -e "$configfolder/$package/DocumentsUI.apk" ]; then
+    echo "Files needed found"
+    mkdir -p $MODPATH/temp/$package
+    cp -f $configfolder/$package $MODPATH/temp/$package
   else
-    echo "No DocumentsUI package in the valid area, falling back to volume key selection"
-    VolumeSelect
+    echo "Downloading files needed"
+    mkdir -p $MODPATH/temp/$package
+    wget -P $MODPATH/temp/$package https://github.com/ph4n70m-404/DocumentsUI-Replacer/raw/main/temp/$package/DocumentsUI.apk
   fi
+  mkdir -p $MODPATH/system/priv-app/DocumentsUI
+  cp -f $MODPATH/temp/$package/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI
 }
 #Volume key selection if no config
 VolumeSelect() {
@@ -22,29 +23,40 @@ VolumeSelect() {
   echo "grey dark theme is from LineageOS, black dark theme is from dotOS"
   echo "Vol+ = grey dark theme, Vol- = black dark theme"
   if chooseport; then
-    echo "Grey dark theme chosen"
-    GreyInstall
+    export theme="Grey dark theme"
+    export package=lineageos
+    echo "$theme chosen"
   else
-    echo "Black dark theme chosen"
-    BlackInstall
+    export theme="Black dark theme"
+    export package=dotos
+    echo "$theme chosen"
   fi
 }
-#look for config and check for parameters
-configfolder=/sdcard/documentsui-replacer/
+#checl for config and check for parameters
 if [ -f "$configfolder/config.txt" ]; then
   grep -q "theme=grey" $configfolder/config.txt
   if [[ $? = 0 ]]; then
-    GreyInstall
+    export theme="Grey dark theme"
+    export package=lineageos
+    echo "$theme chosen"
   else
     grep -q "theme=black" $configfolder/config.txt
     if [[ $? = 0 ]]; then
-      BlackInstall
+      export theme="Black dark theme"
+      export package=dotos
+      echo "$theme chosen"
     else
       grep -q "theme=custom" $configfolder/config.txt
       if [[ $? = 0 ]]; then
-        CustomInstall
+        if [ -e "$configfolder/custom/DocumentsUI.apk" ]; then
+          export theme="Custom DocumentsUI"
+          export package="custom"
+          echo "$theme chosen"
+        else
+          echo "No valid option selected, falling back to volume key selection"
+          VolumeSelect
+        fi
       else
-        echo "No valid option selected, falling back to volume key selection"
         VolumeSelect
       fi
     fi
@@ -52,5 +64,6 @@ if [ -f "$configfolder/config.txt" ]; then
 else
   VolumeSelect
 fi
+Install
 #post install cleanup
 rm -rf $MODPATH/temp
