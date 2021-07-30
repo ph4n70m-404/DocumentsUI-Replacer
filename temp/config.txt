@@ -1,5 +1,5 @@
 #which theme should be installed?
 #grey (grey is considered the default) - the grey dark theme (LineageOS DocumentsUI package)
 #black - the black dark theme (dotOS DocumentsUI package)
-#custom - a DocumentsUI package placed by the user in /sdcard/documentsui-replacer/
+#custom - a DocumentsUI package placed by the user in /sdcard/documentsui-replacer/custom/
 theme=grey
