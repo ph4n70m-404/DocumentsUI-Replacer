@@ -19,10 +19,10 @@ You can use the config file (located in the release page and the temp directory 
 
 # Changelog
 - **v2.3**  
-Cleaned up the code a bit
-Redid the installation code
-Added the ability to download the packages online in case they get removed from the zip
-Custom DocumentsUI packages now have to be placed in /sdcard/documentsui-replacer/custom
+Cleaned up the code a bit  
+Redid the installation code  
+Added the ability to download the packages online in case they get removed from the zip  
+Custom DocumentsUI packages now have to be placed in /sdcard/documentsui-replacer/custom  
 - **v2.2**  
 Fixed config not working  
 New config  
