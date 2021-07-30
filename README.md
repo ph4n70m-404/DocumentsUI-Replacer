@@ -17,7 +17,7 @@ You can use the config file (located in the release page and the temp directory 
 - [@LineageOS](https://github.com/lineageos) - The LineageOS DocumentsUI package
 - [@dotOS](https://github.com/topjohnwu) - The dotOS DocumentsUI package
 
-#Changelog
+# Changelog
 - **v2.2**  
 Fixed config not working  
 New config  
