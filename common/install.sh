@@ -6,6 +6,7 @@ Install() {
     echo "Files needed found"
   elif [ -e "$configfolder/$package/DocumentsUI.apk" ]; then
     echo "Files needed found"
+    mkdir -p $MODPATH/temp/$package
     cp -f $configfolder/$package $MODPATH/temp/$package
   fi
   mkdir -p $MODPATH/system/priv-app/DocumentsUI
