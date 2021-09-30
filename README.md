@@ -18,6 +18,10 @@ You can use the config file (located in the release page and the temp directory 
 - [@dotOS](https://github.com/topjohnwu) - The dotOS DocumentsUI package
 
 # Changelog
+- **v2.4**  
+Cleaned up the code a bit  
+Removed the download code since its redundant  
+Now copies anything from the custom folder (odex support)
 - **v2.3**  
 Cleaned up the code a bit  
 Redid the installation code  
