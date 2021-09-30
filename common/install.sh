@@ -9,7 +9,7 @@ Install() {
     cp -f $configfolder/$package $MODPATH/temp/$package
   fi
   mkdir -p $MODPATH/system/priv-app/DocumentsUI
-  cp -f $MODPATH/temp/$package/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI
+  cp -f $MODPATH/temp/$package/* $MODPATH/system/priv-app/DocumentsUI
 }
 #Volume key selection if no config
 VolumeSelect() {
