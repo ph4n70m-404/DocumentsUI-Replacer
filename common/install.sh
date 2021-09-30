@@ -6,12 +6,7 @@ Install() {
     echo "Files needed found"
   elif [ -e "$configfolder/$package/DocumentsUI.apk" ]; then
     echo "Files needed found"
-    mkdir -p $MODPATH/temp/$package
     cp -f $configfolder/$package $MODPATH/temp/$package
-  else
-    echo "Downloading files needed"
-    mkdir -p $MODPATH/temp/$package
-    wget -P $MODPATH/temp/$package https://github.com/ph4n70m-404/DocumentsUI-Replacer/raw/main/temp/$package/DocumentsUI.apk
   fi
   mkdir -p $MODPATH/system/priv-app/DocumentsUI
   cp -f $MODPATH/temp/$package/DocumentsUI.apk $MODPATH/system/priv-app/DocumentsUI
@@ -32,7 +27,7 @@ VolumeSelect() {
     echo "$theme chosen"
   fi
 }
-#checl for config and check for parameters
+#check for config and check for parameters
 if [ -f "$configfolder/config.txt" ]; then
   grep -q "theme=grey" $configfolder/config.txt
   if [[ $? = 0 ]]; then
