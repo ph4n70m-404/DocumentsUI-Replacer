@@ -9,7 +9,7 @@ This is a magisk module that replaces the DocumentsUI package with the LineageOS
 
 # Downloading
 You can find the latest version [here](https://github.com/ph4n70m-404/DocumentsUI-Replacer/releases/latest).  
-You can find the changelog [here](https://raw.githubusercontent.com/ph4n70m-404/DocumentsUI-Replacer/main/changelog.md).  
+You can find the changelog [here](https://github.com/ph4n70m-404/DocumentsUI-Replacer/blob/main/changelog.md).  
 
 # Installation
 Download the zip and flash with magisk. You will be given a volume key choice, the up key being the grey dark theme(the LineageOS DocumentsUI package) and the down key being the black dark theme (the dotOS DocumentsUI package).  
