@@ -18,19 +18,19 @@
 ### v2.2,v2.1,v2.0,v2.0 - 7.23.2021
 This was basically me messing around and learning as I go so the code is really rough at times.
 - **v2.2**  
- * Fixed config not working  
- * New config  
- * Old config doesn't work with the new version  
- * Cleaned up the code a bit more  
- * Made it so that if the config fails it takes you to the volume selection menu  
+  * Fixed config not working  
+  * New config  
+  * Old config doesn't work with the new version  
+  * Cleaned up the code a bit more  
+  * Made it so that if the config fails it takes you to the volume selection menu  
 - **v2.1**  
- * Added support for a config file  
- * Implemented the ability to use a user picked DocumentsUI that can only be set with the config file  
- * Cleaned up the code a bit, deleted unused files  
+  * Added support for a config file  
+  * Implemented the ability to use a user picked DocumentsUI that can only be set with the config file  
+  * Cleaned up the code a bit, deleted unused files  
 - **v2.0**  
- * Implemented the volume key decision between themes  
- * Pulled DocumentsUI packages from official LineageOS 18.1 and dotOS 5.1.2 builds
+  * Implemented the volume key decision between themes  
+  * Pulled DocumentsUI packages from official LineageOS 18.1 and dotOS 5.1.2 builds
 - **v1.0**  
- * Original release  
- * A simple Magisk module test before I had any real idea what I was doing
- * Pulled DocumentsUI package from an AICP build (AICP uses their DocumentsUI from LineageOS apparently)
+  * Original release  
+  * A simple Magisk module test before I had any real idea what I was doing
+  * Pulled DocumentsUI package from an AICP build (AICP uses their DocumentsUI from LineageOS apparently)
