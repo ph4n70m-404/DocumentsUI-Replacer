@@ -1,8 +1,12 @@
 # Changelog
+### v3 - 5.29.2022
+* General script cleanup  
+* Android 12.1 support  
+
 ### v2.5 - 3.14.2022
-* Cleaning up the repo
+* Cleaning up the repo  
 * Updating to the latest MMT-Extended edits (update.json support)  
-* No functionality changed just edits for future updates
+* No functionality changed just edits for future updates  
 
 ### v2.4 - 9.30.2021
 * Cleaned up the code a bit  

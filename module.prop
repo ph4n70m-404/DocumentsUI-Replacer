@@ -1,7 +1,7 @@
 id=documentsui_replacer
 name=DocumentsUI-Replacer
-version=v2.5
-versionCode=3
+version=v3
+versionCode=4
 author=ph4n70m-404
 description=Replaces the default DocumentsUI (built in file manager) app
 updateJson=https://raw.githubusercontent.com/ph4n70m-404/DocumentsUI-Replacer/main/update.json
